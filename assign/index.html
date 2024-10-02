@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #editor {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 80%;
+      min-height: 200px;
+      position: relative;
+    }
+    #editor span {
+      position: absolute;
+      cursor: move;
+    }
+    .toolbar {
+      margin-bottom: 20px;
+    }
+    .toolbar input, .toolbar select, .toolbar button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Celebrare Assignment</h1>
+
+  <div class="toolbar">
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button onclick="addText()">Add Text</button>
+    <label for="fontSize">Font Size:</label>
+    <select id="fontSize" onchange="changeFontSize()">
+      <option value="16">16px</option>
+      <option value="20">20px</option>
+      <option value="24">24px</option>
+      <option value="28">28px</option>
+      <option value="32">32px</option>
+    </select>
+    <label for="fontColor">Font Color:</label>
+    <input type="color" id="fontColor" onchange="changeFontColor()">
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+  </div>
+
+  <div id="editor"></div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
